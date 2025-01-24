@@ -24,3 +24,14 @@ function atualizarLista(){
         lista.appendChild(item);
     }
 }
+
+function sortearAmigo(){
+    if(amigos.length < 2){
+        alert('Adicione pelo menos 2 amigos para sortear.')
+    } else {
+        let indiceSorteado = Math.floor(Math.random() * amigos.length);
+        let amigoSorteado = amigos[indiceSorteado];
+        let resultado = document.getElementById('resultado');
+        resultado.innerHTML = `Amigo Sorteado: ${amigoSorteado}`
+    }
+}
